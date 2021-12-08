@@ -1,0 +1,88 @@
+<div>
+  <div class="wrapper fadeInDown m-auto">
+    <div id="formContent">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+        <div class="fadeIn first py-4">
+            <div class="text-3xl text-gray-800">
+              Account Settings
+            </div>
+        </div>
+
+        <div class="border-b-2">
+        </div>
+
+        <div class="pt-6 field pb-4" name="login" placeholder="login" id="login">
+          <div class="text-xl text-gray-800 fadeIn second">
+            Email
+          </div>
+          <%= f.email_field :email, autocomplete: 'Email', placeholder:' email', class:"fadeIn second widerTextField inputText" %>
+        </div>
+
+        <div class="field" name="login" placeholder="login" id="login">
+          <div class="text-xl text-gray-800 fadeIn third">
+            Username
+          </div>
+          <%= f.text_field :username, autocomplete: 'username', placeholder:' username', class:"fadeIn third widerTextField inputText" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="py-4 fadeIn third">
+          <div class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Edit Password
+          </div>
+        </div>
+
+        <div class="collapse" id="collapseExample">
+          <div class="pb-4">
+            <div class="py-4 border-2">
+
+              <div class="field" name="login" placeholder="login" id="login">
+                <div class="text-xl text-gray-800">
+                  New Password
+                </div>
+                <%= f.password_field :password, autocomplete: "new-password", placeholder:'New Password', class:"fadeIn first widerTextField inputText" %>
+              </div>
+
+              <div class="field" name="login" placeholder="login" id="login">
+                <div class="text-xl text-gray-800">
+                  New Password Confirmation
+                </div>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:'New Password Confirmation', class:"fadeIn first widerTextField inputText" %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="field pb-8">
+          <div class="text-xl fadeIn fourth">
+          <div class="text-gray-800">
+            Current Password
+          </div>
+          <div class="text-base text-gray-500">
+            (we need your current password to confirm your changes)
+          </div>
+          </div>
+
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder:"Current Password", class:"field fadeIn fourth widerTextField inputText" %>
+        </div>
+
+        <div class="actions fadeIn sixth pb-4">
+          <%= f.submit "Update", id:"formBtn", class:'cursor-pointer' %>
+        </div>
+
+        <div class="border-t-2"></div>
+
+        <div class="pt-8 pb-2">
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+        </div>
+        <!-- <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+
+      <% end %>
+    </div>
+  </div>
+</div>
