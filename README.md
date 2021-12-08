@@ -5,13 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* ruby -v 3.0.1
 
-* System dependencies
+* rails -v 6.1.4.1
 
-* Configuration
-
-* Database creation
+* Bootstrap 5 and TailwindCSS 1.0 CDNs
 
 * Database initialization
 
