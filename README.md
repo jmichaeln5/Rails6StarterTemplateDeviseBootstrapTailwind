@@ -35,11 +35,11 @@ Things you may want to cover:
 
 5 - Search for the following throughout newly name project and rename replace with new application name accordingly 
 
-Rails6DeviseLoginTemplate
-Rails 6 Devise Login Template
-rails_6_devise_login_template
-rails-6-devise-login-template	
-RAILS_6_DEVISE_LOGIN_TEMPLATE
+*Rails6DeviseLoginTemplate
+*Rails 6 Devise Login Template
+*rails_6_devise_login_template
+*rails-6-devise-login-template	
+*RAILS_6_DEVISE_LOGIN_TEMPLATE
 
 		$ rails db:drop && rails db:create && rails db:migrate
 
